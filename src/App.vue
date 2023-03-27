@@ -10,6 +10,7 @@
       <h1 class="text-white">Content Goes Here</h1>
     </div>
   </main>
+  <Banner />
   <TheFooter />
 </template>
 
@@ -17,11 +18,13 @@
 
 import TheHeader from './components/TheHeader.vue';
 import TheFooter from './components/TheFooter.vue';
+import Banner from './components/Banner.vue';
 
 export default {
   components: {
     TheHeader,
-    TheFooter
+    TheFooter,
+    Banner
   }
 }  
 </script>

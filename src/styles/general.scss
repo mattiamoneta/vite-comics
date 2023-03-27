@@ -1,8 +1,10 @@
 @use 'bootstrap';
 @use './partials/colors' as *;
+@use './partials/controls';
 @use './partials/navbar';
 @use './partials/footer';
-@use './partials/controls';
+@use './partials/banner';
+
 
 
 h1,
@@ -11,7 +13,6 @@ h3,
 h4,
 h5,
 h6,
-span,
 .btn {
     font-family: 'Oswald', sans-serif;
 }

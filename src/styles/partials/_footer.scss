@@ -24,8 +24,9 @@
 footer {
     background-color: $color-gray-light;
 
-    & span {
+    & .follow {
         color: $color-primary;
+        font-family: 'Oswald', sans-serif;
     }
 }
 
