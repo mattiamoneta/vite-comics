@@ -1,0 +1,25 @@
+@use './colors' as *;
+
+#footer {
+    background-image: url('/footer-bg.jpg');
+    background-size: cover;
+
+    & .bg-logo {
+        background-image: url('/dc-logo-bg.png');
+        background-position: center right;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+footer {
+    background-color: $color-gray-light;
+
+
+
+}
+
+.list-unstyled * {
+    padding: 0 !important;
+    margin: 0 !important;
+}

@@ -1,0 +1,15 @@
+@use './colors' as *;
+
+.navbar-brand {
+    .nav-logo {
+        height: 70px;
+    }
+}
+
+.nav-item {
+    border-bottom: 3px solid white;
+
+    &:hover {
+        border-bottom: 3px solid $color-primary;
+    }
+}
