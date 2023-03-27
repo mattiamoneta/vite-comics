@@ -2,10 +2,8 @@
 @use './partials/colors' as *;
 @use './partials/navbar';
 @use './partials/footer';
+@use './partials/controls';
 
-* {
-    font-family: 'PT Sans', sans-serif;
-}
 
 h1,
 h2,
@@ -13,9 +11,9 @@ h3,
 h4,
 h5,
 h6,
-.nav-item {
+span,
+.btn {
     font-family: 'Oswald', sans-serif;
-    font-weight: bold;
 }
 
 main {

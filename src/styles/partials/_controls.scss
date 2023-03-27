@@ -1,0 +1,15 @@
+@use './colors' as *;
+
+.btn-circular {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: $color-secondary;
+
+    &:hover {
+        background-color: white;
+    }
+
+}

@@ -2,41 +2,42 @@
 
 <template>
     <footer>
-        <div class="container-fluid" id="footer">
+        <div class="container-fluid" id="footer-wrapper">
             <div class="container">
                 <div class="row">
-                    <div class="col-6 py-5">
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <h5 class="text-uppercase text-white">dc comics</h5>
-                                <ul class="list-unstyled" v-for="(item) in sectDcComics">
-                                    <li class="footer-link"><a :href="item.href"
-                                            class="text-decoration-none text-muted small">{{ item.content
+                    <div class="col-lg-6 py-5">
+                        <div class="row text-lg-start text-center">
+                            <div class="col-lg-3">
+                                <h5 class="text-uppercase text-white mb-4">dc comics</h5>
+                                <ul class="list-unstyled">
+                                    <li v-for="(item) in sectDcComics"><a :href="item.href"
+                                            class="text-decoration-none small footer-link">{{
+                                                item.content
                                             }}</a>
                                     </li>
                                 </ul>
-                                <h5 class="text-uppercase text-white">shop</h5>
-                                <ul class="list-unstyled" v-for="(item) in sectShop">
-                                    <li class="footer-link"><a :href="item.href"
-                                            class="text-decoration-none text-muted small">{{ item.content
-                                            }}</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-lg-4">
-                                <h5 class="text-uppercase text-white">dc</h5>
-                                <ul class="list-unstyled" v-for="(item) in sectDc">
-                                    <li class="footer-link"><a :href="item.href"
-                                            class="text-decoration-none text-muted small">{{ item.content
+                                <h5 class="text-uppercase text-white mb-4">shop</h5>
+                                <ul class="list-unstyled">
+                                    <li class="footer-link" v-for="(item) in sectShop"><a :href="item.href"
+                                            class="text-decoration-none small footer-link">{{ item.content
                                             }}</a>
                                     </li>
                                 </ul>
                             </div>
-                            <div class="col-lg-4">
-                                <h5 class="text-uppercase text-white">sites</h5>
-                                <ul class="list-unstyled" v-for="(item) in sectSites">
-                                    <li class="footer-link"><a :href="item.href"
-                                            class="text-decoration-none text-muted small">{{ item.content
+                            <div class="col-lg-3">
+                                <h5 class="text-uppercase text-white mb-4">dc</h5>
+                                <ul class="list-unstyled">
+                                    <li class="footer-link" v-for="(item) in sectDc"><a :href="item.href"
+                                            class="text-decoration-none small footer-link">{{ item.content
+                                            }}</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-3">
+                                <h5 class="text-uppercase text-white mb-4">sites</h5>
+                                <ul class="list-unstyled">
+                                    <li class="footer-link" v-for="(item) in sectSites"><a :href="item.href"
+                                            class="text-decoration-none small footer-link">{{ item.content
                                             }}</a>
                                     </li>
                                 </ul>
@@ -44,26 +45,23 @@
                         </div>
                     </div>
 
-                    <div class="col-6 bg-logo"></div>
+                    <div class="col-lg-6 bg-logo"></div>
                 </div>
             </div>
         </div>
         <div class="container py-4">
             <div class="row">
-                <div class="col-lg-2">
+                <div class="col-lg-2 text-lg-start text-center pb-lg-0 pb-4">
                     <a href="#"
-                        class="btn btn-outline-primary outline-squared rounded-0 text-white border-3 border border-primary">SIGN-UP
+                        class="btn btn-outline-primary outline-squared rounded-0 text-white border-3 border border-primary fw-bold">SIGN-UP
                         NOW!</a>
                 </div>
-                <div class="col-lg-10 text-end">
-                    <span class="text-uppercase text-primary fw-bold me-3">follow us</span>
+                <div class="col-lg-10 text-lg-end text-center">
+                    <span class="text-uppercase fs-4 fw-bold me-5 align-middle follow">follow us</span>
                     <ul class="list-inline d-inline">
-                        <a href="#" class="btn rounded-circle text-tertiary bg-light mx-1"><i
-                                class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" class="btn rounded-circle text-tertiary bg-light mx-1"><i
-                                class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" class="btn rounded-circle text-tertiary bg-light mx-1"><i
-                                class="fa-brands fa-facebook-f"></i></a>
+                        <li v-for="item in social" class="list-inline-item"><a :href="item.href" class="btn btn-circular"><i
+                                    :class="item.icon"></i></a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -76,91 +74,129 @@ export default {
     name: 'TheFooter.vue',
     data() {
         return {
+            social: [
+                {
+                    icon: 'fa-brands fa-facebook-f',
+                    href: '#'
+                }, {
+                    icon: 'fa-brands fa-twitter',
+                    href: '#'
+                }, {
+                    icon: 'fa-brands fa-youtube',
+                    href: '#'
+                }, {
+                    icon: 'fa-brands fa-pinterest-p',
+                    href: '#'
+                }, {
+                    icon: 'fa-solid fa-location-dot',
+                    href: '#'
+                },
+            ],
             sectDcComics: [
                 {
-                    content: 'Item1',
+                    content: 'Characters',
                     href: '#'
                 },
                 {
-                    content: 'Item1',
+                    content: 'Comics',
                     href: '#'
                 },
                 {
-                    content: 'Item1',
+                    content: 'Movies',
                     href: '#'
                 },
                 {
-                    content: 'Item1',
+                    content: 'TV',
                     href: '#'
                 },
                 {
-                    content: 'Item1',
+                    content: 'Games',
+                    href: '#'
+                },
+                {
+                    content: 'Videos',
+                    href: '#'
+                },
+                {
+                    content: 'News',
                     href: '#'
                 }
             ],
             sectShop: [
                 {
-                    content: 'Item1',
+                    content: 'Shop DC',
                     href: '#'
                 },
                 {
-                    content: 'Item1',
-                    href: '#'
-                },
-                {
-                    content: 'Item1',
-                    href: '#'
-                },
-                {
-                    content: 'Item1',
-                    href: '#'
-                },
-                {
-                    content: 'Item1',
+                    content: 'Shop DC Collectibles',
                     href: '#'
                 }
             ],
             sectDc: [
                 {
-                    content: 'Item1',
+                    content: 'Terms Of Use',
                     href: '#'
                 },
                 {
-                    content: 'Item1',
+                    content: 'Privacy policy (New)',
                     href: '#'
                 },
                 {
-                    content: 'Item1',
+                    content: 'Ad Choices',
                     href: '#'
                 },
                 {
-                    content: 'Item1',
+                    content: 'Advertising',
                     href: '#'
                 },
                 {
-                    content: 'Item1',
+                    content: 'Jobs',
+                    href: '#'
+                },
+                {
+                    content: 'Subcriptions',
+                    href: '#'
+                },
+                {
+                    content: 'Talent Workshops',
+                    href: '#'
+                },
+                {
+                    content: 'CPSC Certificates',
+                    href: '#'
+                },
+                {
+                    content: 'Ratings',
+                    href: '#'
+                },
+                {
+                    content: 'Shop Help',
+                    href: '#'
+                },
+                {
+                    content: 'Contact Us',
                     href: '#'
                 }
             ],
             sectSites: [
                 {
-                    content: 'Item1',
+                    content: 'DC',
                     href: '#'
                 },
                 {
-                    content: 'Item1',
+                    content: 'MAD Magazine',
                     href: '#'
                 },
                 {
-                    content: 'Item1',
+                    content: 'DC Kids',
                     href: '#'
                 },
                 {
-                    content: 'Item1',
+                    content: 'DC Universe',
                     href: '#'
                 },
                 {
-                    content: 'Item1',
+                    content: 'DC Power Visa',
                     href: '#'
                 }
             ],
