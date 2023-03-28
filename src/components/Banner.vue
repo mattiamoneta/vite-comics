@@ -1,7 +1,7 @@
 <script>
 
 export default {
-    name: 'Banner.vue',
+    name: 'Banner',
 
     data() {
         return {

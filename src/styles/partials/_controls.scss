@@ -1,5 +1,7 @@
 @use './colors' as *;
 
+// Buttons
+
 .btn-circular {
     display: inline-block;
     height: 40px;
@@ -15,4 +17,10 @@
 
 .bg-blue {
     background-color: $color-primary;
+}
+
+
+.list-unstyled * {
+    padding: 0 !important;
+    margin: 0 !important;
 }

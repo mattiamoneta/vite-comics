@@ -1,6 +1,17 @@
 @use './colors' as *;
 
-#footer-wrapper {
+// Footer
+
+footer {
+    background-color: $color-gray-light;
+
+    & .follow {
+        color: $color-primary;
+        font-family: 'Oswald', sans-serif;
+    }
+}
+
+.footer-wrapper {
     background-image: url('/footer-bg.jpg');
     background-size: cover;
 
@@ -19,21 +30,4 @@
     & a.footer-link:hover {
         color: white;
     }
-}
-
-footer {
-    background-color: $color-gray-light;
-
-    & .follow {
-        color: $color-primary;
-        font-family: 'Oswald', sans-serif;
-    }
-}
-
-
-
-
-.list-unstyled * {
-    padding: 0 !important;
-    margin: 0 !important;
 }

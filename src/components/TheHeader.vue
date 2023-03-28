@@ -1,6 +1,6 @@
 <script>
 export default {
-    name: 'TheHeader.vue',
+    name: 'TheHeader',
     data() {
         return {
             navItems: [

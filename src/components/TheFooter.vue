@@ -2,7 +2,7 @@
 
 <template>
     <footer>
-        <div class="container-fluid" id="footer-wrapper">
+        <div class="container-fluid footer-wrapper">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 py-5">
@@ -71,7 +71,7 @@
 
 <script>
 export default {
-    name: 'TheFooter.vue',
+    name: 'TheFooter',
     data() {
         return {
             social: [
